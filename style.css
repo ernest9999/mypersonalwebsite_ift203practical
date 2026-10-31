@@ -1,0 +1,302 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: #B80000;
+    --yellow: #FFD11E;
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 34px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+
+header {
+    background-color: var(--black);
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-bottom: 1px solid var(--white);
+}
+
+.logo {
+    color: var(--white);
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--yellow);
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--white);
+    font-weight: bold;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+
+nav a:hover,
+nav a:focus {
+    color: var(--red);
+    outline: 2px solid var(--red);
+    outline-offset: 5px;
+}
+
+.btn:hover,
+.btn:focus,
+button:hover,
+button:focus {
+    background-color: var(--yellow);
+    color: var(--black);
+    border-color: var(--yellow);
+    outline: 2px solid var(--yellow);
+    outline-offset: 3px;
+}
+
+
+section {
+    padding: 65px 7%;
+}
+
+.section-title {
+    color: var(--white);
+    margin-bottom: 25px;
+}
+
+.yellow-text {
+    color: var(--yellow);
+}
+
+.red-text {
+    color: var(--red);
+}
+
+
+.hero {
+    min-height: 430px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--black);
+}
+
+.hero h1 {
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--yellow);
+}
+
+.hero h2 {
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 650px;
+    font-size: 18px;
+}
+
+
+.btn,
+button {
+    display: inline-block;
+    background-color: var(--red);
+    color: var(--white);
+    border: 1px solid var(--red);
+    padding: 12px 25px;
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid var(--white);
+    padding: 22px;
+    margin: 5px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.card h3 {
+    color: var(--red);
+    margin-bottom: 12px;
+}
+
+.card p {
+    margin-bottom: 0;
+}
+
+.card:hover {
+    border-color: var(--yellow);
+    transform: translateY(-5px);
+}
+
+
+.journey-box {
+    background-color: var(--white);
+    color: var(--black);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--red);
+}
+
+.journey-box h3 {
+    color: var(--red);
+    margin-bottom: 10px;
+}
+
+
+.contact-form {
+    max-width: 650px;
+}
+
+.contact-form label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid var(--white);
+    background-color: var(--white);
+    color: var(--black);
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: 3px solid var(--yellow);
+    border-color: var(--yellow);
+}
+
+
+#featured-projects {
+    background-color: var(--black);
+    border-top: 1px solid var(--white);
+    border-bottom: 1px solid var(--white);
+}
+
+#featured-projects .section-title {
+    color: var(--white);
+}
+
+
+
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid var(--white);
+}
+
+footer p {
+    margin: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 350px;
+    }
+
+    section {
+        padding: 45px 6%;
+    }
+
+    .contact-table {
+        font-size: 14px;
+    }
+}
